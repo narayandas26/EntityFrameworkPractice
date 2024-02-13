@@ -29,6 +29,8 @@ internal class Program
         var optionsBuilter = new DbContextOptionsBuilder<NarCosmosContext>();
         optionsBuilter.UseSqlServer(cosmosConStr);
 
+        //powershell command for scafoolding the dbcontext
+        //dotnet ef dbcontext scaffold "<<connection string>>" Microsoft.EntityFrameworkCore.SqlServer -ContextDir CtxFolderName -o ModelsFolderName
         //var dbContext = new NarCosmosContext(optionsBuilter.Options);
 
         var dbContext = new NarCosmosContext(cosmosConStr);
